@@ -2,6 +2,10 @@
 
 BudgetWise is a beginner-friendly personal finance web application. Users can record income and expenses, organize entries with categories, set monthly spending targets, and review simple financial summaries. The browser frontend is plain HTML, CSS and JavaScript; a small Java server exposes JSON endpoints and uses JDBC to store data in MySQL.
 
+**Project presentation:** [Open BudgetWise](https://keshaba-dev.github.io/BudgetWise/) · **Source code:** [GitHub repository](https://github.com/keshaba-dev/BudgetWise)
+
+The public presentation is hosted on GitHub Pages. The full Java and MySQL application runs locally by following the setup instructions below; its `localhost` address is only for your own development computer.
+
 ## Features
 
 - Registration, login and logout with session-based authentication and BCrypt password hashes
@@ -80,7 +84,7 @@ Install JDK 17+ and Maven 3.9+, configure MySQL, then run:
 mvn clean compile exec:java
 ```
 
-Open [http://localhost:8080](http://localhost:8080). The server uses `PORT` when provided and defaults to 8080. Create an account, then add transactions and a monthly budget. Maven downloads the dependencies listed in `pom.xml` on the first run.
+After the server starts, open `http://localhost:8080` in a browser on the same computer. This is a local development address, not a public interviewer demo. The server uses `PORT` when provided and defaults to 8080. Create an account, then add transactions and a monthly budget. Maven downloads the dependencies listed in `pom.xml` on the first run.
 
 ## Important JDBC concepts
 
@@ -103,9 +107,7 @@ The frontend JavaScript uses `fetch('/api/...')` to send and receive JSON. The J
 
 ## GitHub Pages and deployment
 
-The static project presentation in `site/` is configured to deploy through the GitHub Actions workflow in `.github/workflows/pages.yml`. After the workflow succeeds, it will be available at [keshaba-dev.github.io/BudgetWise](https://keshaba-dev.github.io/BudgetWise/). It presents the project and links to the source. GitHub Pages cannot run the Java server or connect securely to MySQL. For the full application, deploy the Java service and MySQL database to a server that supports them; do not publish credentials. The API-dependent account pages run from the Java server.
-
-The project source is at [github.com/keshaba-dev/BudgetWise](https://github.com/keshaba-dev/BudgetWise).
+The static project presentation in `site/` is deployed through the GitHub Actions workflow in `.github/workflows/pages.yml`. It presents BudgetWise and links to the source. GitHub Pages cannot run the Java server or connect securely to MySQL. The API-dependent account pages require the Java server; the full application can be hosted on a server that supports Java and MySQL.
 
 ## Future improvements
 
