@@ -112,7 +112,7 @@ The frontend JavaScript uses `fetch('/api/...')` to send and receive JSON. The J
 
 ## GitHub Pages and deployment
 
-GitHub Pages deploys the static frontend copied to `docs/` through `.github/workflows/pages.yml`. Its `index.html`, CSS and JavaScript are available publicly. GitHub Pages cannot run the Java server or connect to MySQL, so account and transaction actions require the Java backend and MySQL configured locally as described above.
+GitHub Pages builds the static frontend from `docs/` through `.github/workflows/jekyll-gh-pages.yml`. Its `index.html`, CSS and JavaScript are available publicly. GitHub Pages cannot run the Java server or connect to MySQL, so account and transaction actions require the Java backend and MySQL configured locally as described above.
 
 ## Future improvements
 
