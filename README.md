@@ -4,7 +4,7 @@ BudgetWise is a beginner-friendly personal finance web application. Users can re
 
 **Project presentation:** [Open BudgetWise](https://keshaba-dev.github.io/BudgetWise/) · **Source code:** [GitHub repository](https://github.com/keshaba-dev/BudgetWise)
 
-The public presentation is hosted on GitHub Pages. The full Java and MySQL application runs locally by following the setup instructions below; its `localhost` address is only for your own development computer.
+The public presentation is published to GitHub Pages when the deployment workflow completes. The full Java and MySQL application runs locally by following the setup instructions below; its `localhost` address is only for your own development computer.
 
 ## Features
 
@@ -107,7 +107,7 @@ The frontend JavaScript uses `fetch('/api/...')` to send and receive JSON. The J
 
 ## GitHub Pages and deployment
 
-The static project presentation in `site/` is deployed through the GitHub Actions workflow in `.github/workflows/pages.yml`. It presents BudgetWise and links to the source. GitHub Pages cannot run the Java server or connect securely to MySQL. The API-dependent account pages require the Java server; the full application can be hosted on a server that supports Java and MySQL.
+The static project presentation in `site/` is deployed through the GitHub Actions workflow in `.github/workflows/pages.yml`. Once its first deployment succeeds, the public link above opens the BudgetWise presentation. GitHub Pages cannot run the Java server or connect securely to MySQL. The API-dependent account pages require the Java server; the full application can be hosted on a server that supports Java and MySQL.
 
 ## Future improvements
 
