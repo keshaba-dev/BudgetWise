@@ -103,7 +103,9 @@ The frontend JavaScript uses `fetch('/api/...')` to send and receive JSON. The J
 
 ## GitHub Pages and deployment
 
-GitHub Pages can host the static landing/about pages, but it cannot run this Java server or connect securely to MySQL. For the full application, deploy the Java service and MySQL database to a server that supports them; do not publish credentials. If publishing only the presentation pages, keep API-dependent account pages on the Java server.
+The static project presentation in `site/` is configured to deploy through the GitHub Actions workflow in `.github/workflows/pages.yml`. After the workflow succeeds, it will be available at [keshaba-dev.github.io/BudgetWise](https://keshaba-dev.github.io/BudgetWise/). It presents the project and links to the source. GitHub Pages cannot run the Java server or connect securely to MySQL. For the full application, deploy the Java service and MySQL database to a server that supports them; do not publish credentials. The API-dependent account pages run from the Java server.
+
+The project source is at [github.com/keshaba-dev/BudgetWise](https://github.com/keshaba-dev/BudgetWise).
 
 ## Future improvements
 

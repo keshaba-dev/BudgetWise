@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#147d59">
+  <meta name="description" content="BudgetWise is a student-built Java and MySQL personal finance tracker.">
+  <title>BudgetWise — Personal Finance, in good view</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="mark">B</span>BudgetWise</a>
+    <nav><a href="#features">Features</a><a href="#how">How it works</a><a href="#technology">Technology</a></nav>
+    <a class="button button-light" href="https://github.com/keshaba-dev/BudgetWise">View source ↗</a>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">SMART PERSONAL EXPENSE &amp; BUDGET TRACKER</p>
+        <h1>Your money,<br><span>in good view.</span></h1>
+        <p class="lead">A clear, approachable way to track income, understand spending and stay close to a monthly plan.</p>
+        <div class="actions"><a class="button button-green" href="https://github.com/keshaba-dev/BudgetWise#run-locally">Run the project locally ↗</a><a class="text-link" href="#features">Explore the features ↓</a></div>
+        <p class="quiet">Student portfolio project · Java · JDBC · MySQL</p>
+      </div>
+      <div class="preview card">
+        <div class="preview-top"><span>Monthly overview</span><span class="period">● Current month</span></div>
+        <p class="balance-label">Available balance</p><p class="balance">₹ 42,680</p>
+        <div class="bars" aria-label="Decorative monthly spending chart"><i style="--h:38%"></i><i style="--h:55%"></i><i style="--h:44%"></i><i style="--h:72%"></i><i style="--h:52%"></i><i style="--h:83%"></i><i style="--h:62%"></i><i style="--h:94%"></i><i style="--h:74%"></i></div>
+        <div class="summary"><div><small>Income</small><strong>₹58,200</strong></div><div><small>Expenses</small><strong class="expense">₹15,520</strong></div></div>
+        <div class="budget"><div><span>Monthly budget</span><b>64% used</b></div><span class="track"><i></i></span><small>₹18,000 remaining</small></div>
+      </div>
+    </section>
+    <section class="section" id="features">
+      <p class="eyebrow">MADE FOR EVERYDAY MONEY</p><h2>Practical tools. A clearer picture.</h2>
+      <p class="intro">BudgetWise brings the essentials together without making money management feel like another full-time job.</p>
+      <div class="feature-grid">
+        <article class="card"><span class="icon">↗</span><h3>Track transactions</h3><p>Record income and expenses with a category, date and useful description. Search and filter your history.</p></article>
+        <article class="card"><span class="icon">▤</span><h3>Plan a monthly budget</h3><p>Set a spending target, follow progress and get a gentle heads-up around 80% of the plan.</p></article>
+        <article class="card"><span class="icon">⌁</span><h3>Understand patterns</h3><p>Review monthly totals and spending by category using clear, simple financial summaries.</p></article>
+      </div>
+    </section>
+    <section class="section how" id="how">
+      <div><p class="eyebrow">A SIMPLE FLOW</p><h2>From an entry to an insight.</h2><p class="intro">The browser sends a request to the Java API. Java validates it, uses JDBC to query MySQL, then returns JSON for the page to display.</p></div>
+      <ol class="steps"><li><b>01</b><span><strong>Add an entry</strong><small>Choose income or expense, then add its details.</small></span></li><li><b>02</b><span><strong>Save it safely</strong><small>A prepared statement stores it for the signed-in account.</small></span></li><li><b>03</b><span><strong>Review the month</strong><small>SQL aggregates totals and budget progress.</small></span></li></ol>
+    </section>
+    <section class="section technology" id="technology"><p class="eyebrow">BUILT WITH FAMILIAR TOOLS</p><h2>Small parts, clear responsibilities.</h2><div class="chips"><span>Java 17</span><span>JDBC</span><span>MySQL</span><span>Maven</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Jetty</span></div><p class="intro">The code is organized into a small API controller, data access classes, a connection utility and simple model objects. The source repository includes the SQL schema and beginner-friendly setup notes.</p><a class="button button-green" href="https://github.com/keshaba-dev/BudgetWise">Explore the code on GitHub ↗</a></section>
+    <section class="closing"><div><p class="eyebrow">BUDGETWISE</p><h2>A calmer way to see where you stand.</h2><p>This site is a static project presentation. The working transaction and account features run locally with the Java server and MySQL.</p></div><a class="button button-light" href="https://github.com/keshaba-dev/BudgetWise#run-locally">Setup instructions ↗</a></section>
+  </main>
+  <footer><a class="brand" href="#top"><span class="mark">B</span>BudgetWise</a><span>Student portfolio project · Built with care</span><a href="https://github.com/keshaba-dev/BudgetWise">Source on GitHub ↗</a></footer>
+</body>
+</html>
