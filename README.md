@@ -42,6 +42,11 @@ BudgetWise/
 │   ├── css/styles.css                  # Shared responsive design system
 │   ├── js/app.js                       # Navigation, rendering, forms and API calls
 │   └── *.html                          # Landing and feature pages
+├── docs/                                # GitHub Pages copy of the static frontend
+│   ├── index.html                       # Public site entry point
+│   ├── interview-guide.md               # Beginner-friendly interview notes
+│   ├── css/                             # Shared frontend styles
+│   └── js/                              # Browser rendering and API calls
 ├── src/main/java/com/budgetwise/
 │   ├── BudgetWiseApplication.java      # Starts Jetty and serves frontend/API
 │   ├── controller/ApiServlet.java      # HTTP routes, validation and sessions
@@ -107,7 +112,7 @@ The frontend JavaScript uses `fetch('/api/...')` to send and receive JSON. The J
 
 ## GitHub Pages and deployment
 
-The static project presentation in `site/` is deployed through the GitHub Actions workflow in `.github/workflows/pages.yml`. Once its first deployment succeeds, the public link above opens the BudgetWise presentation. GitHub Pages cannot run the Java server or connect securely to MySQL. The API-dependent account pages require the Java server; the full application can be hosted on a server that supports Java and MySQL.
+GitHub Pages deploys the static frontend copied to `docs/` through `.github/workflows/pages.yml`. Its `index.html`, CSS and JavaScript are available publicly. GitHub Pages cannot run the Java server or connect to MySQL, so account and transaction actions require the Java backend and MySQL configured locally as described above.
 
 ## Future improvements
 
