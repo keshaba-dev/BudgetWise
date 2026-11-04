@@ -79,6 +79,7 @@ PowerShell example for the current terminal:
 $env:BUDGETWISE_DB_USER = "root"
 $env:BUDGETWISE_DB_PASSWORD = "your-local-password"
 $env:BUDGETWISE_DB_URL = "jdbc:mysql://localhost:3306/budgetwise_db?serverTimezone=UTC"
+$env:PORT = "8767"
 ```
 
 ## Run locally
@@ -89,7 +90,9 @@ Install JDK 17+ and Maven 3.9+, configure MySQL, then run:
 mvn clean compile exec:java
 ```
 
-After the server starts, open `http://localhost:8767` in a browser on the same computer. This is a local development address, not a public interviewer demo. The server uses `PORT` when provided and defaults to 8080. Create an account, then add transactions and a monthly budget. Maven downloads the dependencies listed in `pom.xml` on the first run.
+In PowerShell, set `PORT` to `8767` as shown above before starting the server. Then open `http://localhost:8767/register.html` in a browser on the same computer to create an account. The server uses `PORT` when provided and defaults to `8080`. Maven downloads the dependencies listed in `pom.xml` on the first run.
+
+**Account creation needs the Java API and MySQL.** GitHub Pages and a static preview such as `http://localhost:8770` only serve the HTML, CSS and JavaScript; they cannot process registration or save financial data. If you see “The BudgetWise API is unavailable here,” open the app from the running Java server at `http://localhost:8767/register.html` after configuring MySQL and starting the app above. These `localhost` addresses work only on your own computer.
 
 ## Important JDBC concepts
 
