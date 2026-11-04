@@ -116,3 +116,5 @@ GitHub Pages can host the static landing/about pages, but it cannot run this Jav
 ## Interview overview
 
 The user enters a page served by Jetty. JavaScript sends a JSON request to `ApiServlet`. The servlet checks the session and input, then calls a DAO. The DAO executes a prepared SQL statement through `DBConnection`. The response returns as JSON and JavaScript updates the page. The `users` table owns private transactions and budgets; categories are shared defaults or are owned by one user. The app computes monthly totals in SQL and compares monthly expense totals with the budget to produce progress and warning states.
+
+See [docs/interview-guide.md](docs/interview-guide.md) for a beginner-friendly walkthrough of the folders, table relationships, JDBC flow and key queries.
