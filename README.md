@@ -84,7 +84,7 @@ Install JDK 17+ and Maven 3.9+, configure MySQL, then run:
 mvn clean compile exec:java
 ```
 
-After the server starts, open `http://localhost:8080` in a browser on the same computer. This is a local development address, not a public interviewer demo. The server uses `PORT` when provided and defaults to 8080. Create an account, then add transactions and a monthly budget. Maven downloads the dependencies listed in `pom.xml` on the first run.
+After the server starts, open `http://localhost:8767` in a browser on the same computer. This is a local development address, not a public interviewer demo. The server uses `PORT` when provided and defaults to 8080. Create an account, then add transactions and a monthly budget. Maven downloads the dependencies listed in `pom.xml` on the first run.
 
 ## Important JDBC concepts
 
